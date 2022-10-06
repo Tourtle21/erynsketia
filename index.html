@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='style.css' rel='stylesheet' />
+</head>
+<body>
+    <div id="game">
+        <div id="scroll">
+            <div class="scrollContainer">
+                <h1>Erynsketia</h1>
+                <p>Long long ago there was much joy and excitement in the land of Erynsketia! People enjoyed epic adventures to around the lands claiming riches to benifit everyone around them. There were 5 different realms that were ruled by great kings that had amazing powers. They all worked together to keep out the darkness.</p>
+                <p>One fateful day darkness began to seep into all corners of the land. Violence began to develop and the little boglings began to act in irratic and crazy manners. It was revealed that a dark sorcerer was trying to harness the powers of all of these great kings to rule the land. </p>
+                <p>Unfortunately one by one each of the great Kings began to lose hope as the power of the sorcerer was beyond them. All at once they disappeared from off the face of the earth along with their powers, interestingly enough the dark sorcerer also vanished.</p>
+                <p>Since then all nations have been trying to recupperate from these attacks, but there is a great darkness that has been left in the land with violence all over.</p>
+                <p>The Argonians, Boglings, Stalwarts, Zudenees, and Burmecians need to be brought back together in harmony, and gain those powers back in order to remove the darkness from the land.</p>
+
+                <p>You feel the covers around you and notice that you are being brought to conciousness. There is a gentle breeze outside and its a beautiful day! You wake up in a little city called Bindekukit!</p>
+                <h1>What race are you traveler?</h1>
+                <h3><span class="race">Burmecian</span> &emsp; <span class="race">Argonian</span> &emsp; <span class="race">Bogling</span> &emsp; <span class="race">Stalwart</span> &emsp; <span class="race">Zudenee</span></h3>
+                <h1>What are you taking on your adventure?</h1>
+                <h3><span class="weapon">Sword</span> &emsp; <span class="weapon">Spell</span> &emsp; <span class="weapon">Dagger</span> &emsp; <span class="weapon">Spear</span> &emsp; <span class="weapon">Bow</span></h3>
+                <h1>What skill do you have?</h1>
+                <h3><span class="skill">Speed</span> &emsp; <span class="skill">Strength</span> &emsp; <span class="skill">Agility</span> &emsp; <span class="skill">Magic</span> &emsp; <span class="skill">Special</span></h3>
+                <h1>Do you have a pet? (2 Player)</h1>
+                <h2><span class='pet'>Yes</span><span class="pet">No</span></h2>
+                <h1>What is your name?</h1>
+                <h2><input id='name' /></h2>
+                <h1>Welcome to Erynsketia Traveler!</h1>
+                <h2 id="start">Start</h2>
+            </div>
+        </div>
+        <div id="map">
+            <div id='healthbar'><div id='innerHealth'></div></div>
+            <div id='manabar'><div id='innerMana'></div></div>
+            <div class="tabs" id="inventory">&#x2638;</div>
+            <div class="tabs" id="skills">&#x2692;</div>
+            <div id="house">
+                <div id="player"></div>
+                <div class='rug'><span id='rug-name'>Oliver's</span><span class='rug-house'>House</span></div>
+                <div class='desk'>
+                    <div class='classContainer'><div class='mage'></div></div>
+                    <div class='classContainer'><div class='berserker'></div></div>
+                    <div class='classContainer'><div class='rogue'></div></div>
+                </div>
+                <div class='door'></div>
+                <div class='bed'></div>
+                <div id="frontDoor"></div>
+                <div id="selectMage"></div>
+                <div id="selectRogue"></div>
+                <div id="selectBerserker"></div>
+            </div>
+            <div id="outside">
+                <div id="houseDoor"></div>
+                <div id="playerHouse"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/player.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/enemies.js"></script>
+    <script src="info.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

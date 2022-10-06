@@ -1,0 +1,340 @@
+@font-face {
+    font-family: ancient;
+    src: url(blackwood-castle/Blackwood\ Castle.ttf);
+}
+body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
+}
+
+#map {
+    display: none;
+}
+#game {
+    display: flex;
+    justify-content: center;
+}
+#name {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: ancient;
+}
+#scroll {
+    background: url(images/elements/scroll.png);
+    height: 700px;
+    width: 800px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    font-family: ancient;
+}
+.scrollContainer::-webkit-scrollbar {
+    display: none;
+  }
+.scrollContainer {
+    height: 492px;
+    width: 560px;
+    margin-top: 112px;
+    margin-left: 80px;
+    overflow: scroll;
+}
+.scrollContainer h1 {
+    text-align: center;
+}
+.scrollContainer p {
+    font-size: 20px;
+}
+.scrollContainer h3 {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.scrollContainer h2 {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+}
+.scrollContainer h2:last-child:hover {
+    color: blue;
+}
+.scrollContainer h3:last-child {
+    justify-content: space-around;
+}
+.scrollContainer span:hover {
+   color: grey;
+}
+.active-race {
+    color: grey;
+}
+.active-weapon {
+    color: grey;
+}
+.active-skill {
+    color: grey;
+}
+.active-pet {
+    color: grey;
+}
+#house {
+    display: none;
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    background-color: red;
+}
+
+#outside {
+    display: none;
+    position: absolute;
+    height: 50000px;
+    width: 50000px;
+    background: url(./images/elements/grass.png);
+}
+
+#player {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: tan;
+    position: absolute;
+    z-index: 1;
+}
+
+.rug {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(209, 140, 12);
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    left: 100px;
+    top: 80px;
+    height: 145px;
+    width: 114px;
+    background: url(./images/elements/rug.png);
+    user-select: none;
+}
+
+.bed {
+    position: absolute;
+    left: 10px;
+    top: 270px;
+    height: 123px;
+    width: 240px;
+    background: url(./images/elements/bed.png);
+    background-size: 100%;
+}
+
+.desk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    width: 80px;
+    background-color:saddlebrown;
+    position: absolute;
+    left: 320px;
+    top: 40px;
+}
+
+.mage {
+    margin-top:10px;
+    box-sizing: border-box;
+    height: 45px;
+    width: 30px;
+    background: url(./images/elements/wizard.png);
+    background-size: 100%;
+    position: absolute;
+}
+
+.rogue {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    background: url(./images/elements/displaybow.png);
+    background-size: 100%;
+    position: absolute;
+    bottom: 10px;
+}
+
+.berserker {
+    margin-top:10px;
+    box-sizing: border-box;
+    height: 54px;
+    width: 60px;
+    background: url(./images/elements/sword.png);
+    background-size: 100%;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 60px;
+}
+
+.classContainer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.classContainer:nth-child(2) {
+    height: 75px;
+}
+
+.classContainer:nth-child(3) {
+    height: 80px;
+}
+
+#rug-name {
+    font-size: 0.9em;
+}
+
+#healthbar {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 8px solid grey;
+    overflow: hidden;
+    left: 50px;
+    top: 50px;
+    z-index:1;
+    /* background-color: grey; */
+}
+
+#innerHealth {
+    position: absolute;
+    top: 0px;
+    height: 100px;
+    width: 100px;
+    border: 10px solid transparent;
+    background-color: red;
+}
+
+.tabs {
+    height: 30px;
+    width: 30px;
+    background: grey;
+    position: absolute;
+    bottom: 20px;
+    left: 80px;
+    border-radius: 5px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#skills {
+    box-sizing:border-box;
+    left: 120px;
+    padding-bottom:4px;
+}
+
+#manabar {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: 50px;
+    top: 50px;
+    border-radius: 50%;
+    border: 8px solid grey;
+    overflow: hidden;
+    z-index:1;
+    /* background-color: grey; */
+}
+
+#innerMana {
+    position: relative;
+    top: 0px;
+    height: 100px;
+    width: 100px;
+    border: 10px solid transparent;
+    background-color: blueviolet;
+}
+
+#frontDoor {
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    left: 108px;
+}
+
+#selectMage {
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    left: 290px;
+    top: 50px;
+}
+
+#selectBerserker {
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    left: 290px;
+    top: 115px;
+}
+
+#selectRogue {
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    left: 290px;
+    top: 180px;
+}
+
+.active {
+    background: yellow;
+}
+
+.grid {
+    height: 2000px;
+    width: 2000px;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 5px;
+    border-image: url(./images/elements/wall.png) 25 round;
+    border-image-repeat: repeat;
+    border-image-slice: -10;
+}
+
+.wall-bottom {
+    border-bottom: 35px solid transparent;
+}
+.wall-right {
+    border-right: 25px solid transparent;
+}
+.wall-bottom-red {
+    border-image: none;
+    border-bottom: 35px solid red;
+}
+.wall-bottom-red {
+    border-image: none;
+    border-right: 25px solid red;
+}
+#playerHouse {
+    height: 400px;
+    width: 400px;
+    background: brown;
+    position: absolute;
+    top: 49000px;
+    left: 1200px;
+}
+
+#houseDoor {
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    left: 1325px;
+    top: 48970px;
+}

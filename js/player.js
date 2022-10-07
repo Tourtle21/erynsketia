@@ -36,6 +36,11 @@ function movePlayer() {
     if (checkCollisionX(speedX * player.speed)) moveX(speedX * player.speed);
     if (checkCollisionY(speedY * player.speed)) moveY(speedY * player.speed);
 
+    if (speedX > 0 && speedY > 0) checkEnemies('both');
+    else if (speedX > 0) checkEnemies('x');
+    else if (speedY > 0) checkEnemies('y');
+    else checkEnemies('none');
+
     player.player.style.left = player.x + 'px';
     currentMap.element.style.left = currentMap.x + 'px';
     player.player.style.top = player.y + 'px';

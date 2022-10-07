@@ -34,6 +34,16 @@ function createEnemies() {
     }
 }
 
+function checkEnemies(direction) {
+    let currentEnemies = currentMap.enemies[player.mapX + " " + player.mapY];
+    if (currentEnemies) {
+        for (let i = 0; i < currentEnemies.length; i++) {
+            
+        }
+    }
+
+}
+
 function spawnThief() {
     let newTheif = {...enemyTypes.thief};
 }

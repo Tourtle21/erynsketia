@@ -5,6 +5,12 @@
 * {
     user-select: none;
 }
+.mapPiece {
+    height: 2000px;
+    width: 2000px;
+    position: relative;
+    background: black;
+}
 body {
     margin: 0;
     background: black;
@@ -107,6 +113,7 @@ body {
     height: 50000px;
     width: 50000px;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.237), rgba(255, 255, 255, 0.237)), url(./images/elements/grass.png);
+    flex-wrap:wrap;
 }
 
 #player {

@@ -20,7 +20,7 @@ function switchMap(mapName, positionX, positionY) {
     }
     currentMap = maps[mapName];
     document.body.style.background = currentMap.background;
-    currentMap.element.style.display = "block";
+    currentMap.element.style.display = "flex";
     currentMap.x = window.innerWidth/2 - currentMap.width/2 + (currentMap.width/2  - positionX);
     currentMap.y = window.innerHeight/2 - currentMap.height/2 + (currentMap.height/2  - positionY);
     player.x = positionX - player.size;

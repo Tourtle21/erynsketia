@@ -1,10 +1,19 @@
-const started = false;
+const started = true;
 let activeRace = 'Argonian';
 let activeWeapon = 'dagger';
 let activeSkill = 'Magic';
 let name = 'Alfonzo';
 let townMusic = new Audio('town.wav')
 townMusic.loop = true;
+
+for (var i = 0; i < 25; i++) {
+    for (var j = 0; j < 25; j++) {
+        let mapPiece = document.createElement('div');
+        mapPiece.className = 'mapPiece';
+        if (i === 24 && j === 0) mapPiece.style.background = 'red';
+        maps.outside.element.appendChild(mapPiece);
+    }
+}
 
 document.getElementById('skills').addEventListener('click', function() {
     if (document.getElementById('statPointsScreen').style.display === 'flex') document.getElementById('statPointsScreen').style.display = 'none';
@@ -222,7 +231,7 @@ document.getElementById('start').addEventListener('click', function() {
             time++;
             document.getElementById('scroll').style.opacity = 100 - time + '%';
             if (time > 100) {
-                document.getElementById('map').style.display = "block";
+                document.getElementById('map').style.display = "flex";
                 townMusic.play();
                 startGame();
                 clearInterval(scrollInterval);

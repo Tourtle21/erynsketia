@@ -20,13 +20,13 @@
 
                 <p>You feel the covers around you and notice that you are being brought to conciousness. There is a gentle breeze outside and its a beautiful day! You wake up in a little city called Bindekukit!</p>
                 <h1>What race are you traveler?</h1>
-                <h3><span class="race">Burmecian</span> &emsp; <span class="race">Argonian</span> &emsp; <span class="race">Bogling</span> &emsp; <span class="race">Stalwart</span> &emsp; <span class="race">Zudenee</span></h3>
+                <h3><span class="race">Burmecian</span> &emsp; <span class="race">Argonian</span> &emsp; <span class="race">Bogling</span> &emsp; <span class="race">Stalwert</span> &emsp; <span class="race">Zudunee</span></h3>
                 <h1>What are you taking on your adventure?</h1>
-                <h3><span class="weapon">Sword</span> &emsp; <span class="weapon">Spell</span> &emsp; <span class="weapon">Dagger</span> &emsp; <span class="weapon">Spear</span> &emsp; <span class="weapon">Bow</span></h3>
+                <h3><span class="weapon">Sword</span> &emsp; <span class="weapon">Staff</span> &emsp;  <span class="weapon">Spear</span> &emsp;  <span class="weapon">Dagger</span>&emsp; <span class="weapon">Bow</span></h3>
                 <h1>What skill do you have?</h1>
-                <h3><span class="skill">Speed</span> &emsp; <span class="skill">Strength</span> &emsp; <span class="skill">Agility</span> &emsp; <span class="skill">Magic</span> &emsp; <span class="skill">Special</span></h3>
-                <h1>Do you have a pet? (2 Player)</h1>
-                <h2><span class='pet'>Yes</span><span class="pet">No</span></h2>
+                <h3><span class="skill">Speed</span> &emsp; <span class="skill">Strength</span> &emsp; <span class="skill">Agility</span> &emsp; <span class="skill">Magic</span> &emsp; <span class="skill">Stealth</span></h3>
+                <!-- <h1>Do you have a pet? (2 Player)</h1>
+                <h2><span class='pet'>Yes</span><span class="pet">No</span></h2> -->
                 <h1>What is your name?</h1>
                 <h2><input id='name' /></h2>
                 <h1>Welcome to Erynsketia Traveler!</h1>
@@ -34,24 +34,37 @@
             </div>
         </div>
         <div id="map">
+            <div id="overlay"> </div>
+            <div id="inventoryScreen"></div>
+            <div id="statPointsScreen">
+                <div class="sideScreen">
+                    <div class='inline'><button class="statbutton">+</button><div class="statText"><span>Health: &nbsp;</span></div><span id="health">0</span></div>
+                    <div class='inline'><button class="statbutton">+</button><div class="statText"><span>Strength: &nbsp;</span></div><span id="strength">0</span></div>
+                    <div class='inline'><button class="statbutton">+</button><div class="statText"><span>Speed: &nbsp;</span></div><span id="speed">0</span></div>
+                    <div class='inline'><button class="statbutton">+</button><div class="statText"><span>Agility: &nbsp;</span></div><span id="agility">0</span></div>
+                    <div class='inline'><button class="statbutton">+</button><div class="statText"><span>Magic: &nbsp;</span></div><span id="magic">0</span></div>
+                    <div class='inline'><button class="statbutton">+</button><div class="statText"><span>Perception: &nbsp;</span></div><span id="perception">0</span></div>
+                    <div class='inline'><button class="statbutton">+</button><div class="statText"><span>Stealth: &nbsp;</span></div><span id="stealth">0</span></div>
+                </div>
+            </div>
             <div id='healthbar'><div id='innerHealth'></div></div>
             <div id='manabar'><div id='innerMana'></div></div>
             <div class="tabs" id="inventory">&#x2638;</div>
             <div class="tabs" id="skills">&#x2692;</div>
             <div id="house">
-                <div id="player"></div>
+                <div id="player"><div id="rightHand"></div></div>
                 <div class='rug'><span id='rug-name'>Oliver's</span><span class='rug-house'>House</span></div>
                 <div class='desk'>
-                    <div class='classContainer'><div class='mage'></div></div>
-                    <div class='classContainer'><div class='berserker'></div></div>
-                    <div class='classContainer'><div class='rogue'></div></div>
+                    <div class='classContainer'><div class='slot'></div></div>
+                    <div class='classContainer'><div class='slot'></div></div>
+                    <div class='classContainer'><div class='slot'></div></div>
                 </div>
                 <div class='door'></div>
                 <div class='bed'></div>
                 <div id="frontDoor"></div>
-                <div id="selectMage"></div>
-                <div id="selectRogue"></div>
-                <div id="selectBerserker"></div>
+                <div id="selectFirst"></div>
+                <div id="selectSecond"></div>
+                <div id="selectThird"></div>
             </div>
             <div id="outside">
                 <div id="houseDoor"></div>
@@ -60,6 +73,7 @@
         </div>
     </div>
     <script src="js/player.js"></script>
+    <script src="js/weapons.js"></script>
     <script src="js/map.js"></script>
     <script src="js/enemies.js"></script>
     <script src="info.js"></script>

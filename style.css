@@ -2,12 +2,24 @@
     font-family: ancient;
     src: url(blackwood-castle/Blackwood\ Castle.ttf);
 }
+* {
+    user-select: none;
+}
 body {
     margin: 0;
     background: black;
     overflow: hidden;
 }
-
+#overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: red;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index:2;
+}
 #map {
     display: none;
 }
@@ -86,7 +98,7 @@ body {
     position: absolute;
     height: 400px;
     width: 400px;
-    background-color: red;
+    background-color: #bd7834;
 }
 
 #outside {
@@ -94,13 +106,12 @@ body {
     position: absolute;
     height: 50000px;
     width: 50000px;
-    background: url(./images/elements/grass.png);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.237), rgba(255, 255, 255, 0.237)), url(./images/elements/grass.png);
 }
 
 #player {
     height: 50px;
     width: 50px;
-    border-radius: 50%;
     background: tan;
     position: absolute;
     z-index: 1;
@@ -176,21 +187,22 @@ body {
     position: absolute;
     top: 60px;
 }
+.slot {
+    box-sizing: border-box;
+    height: 66.66px;
+    width: 60px;
+    background-size: 100%;
+    margin-bottom: 20px;
+    position: absolute;
+}
 
 .classContainer {
-    height: 50px;
+    height: 66.666px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.classContainer:nth-child(2) {
-    height: 75px;
-}
-
-.classContainer:nth-child(3) {
-    height: 80px;
-}
 
 #rug-name {
     font-size: 0.9em;
@@ -269,7 +281,7 @@ body {
     left: 108px;
 }
 
-#selectMage {
+#selectFirst {
     position: absolute;
     height: 50px;
     width: 30px;
@@ -277,7 +289,7 @@ body {
     top: 50px;
 }
 
-#selectBerserker {
+#selectSecond {
     position: absolute;
     height: 50px;
     width: 30px;
@@ -285,7 +297,7 @@ body {
     top: 115px;
 }
 
-#selectRogue {
+#selectThird {
     position: absolute;
     height: 50px;
     width: 30px;
@@ -325,7 +337,7 @@ body {
 #playerHouse {
     height: 400px;
     width: 400px;
-    background: brown;
+    background: #471800;
     position: absolute;
     top: 49000px;
     left: 1200px;
@@ -337,4 +349,46 @@ body {
     width: 100px;
     left: 1325px;
     top: 48970px;
+}
+
+#statPointsScreen {
+    height: 500px;
+    width: 700px;
+    background: black;
+    position: absolute;
+    left: calc(50% - 350px);
+    top: calc(50% - 250px);
+    z-index:3;
+    border: 5px solid grey;
+    border-radius: 5px;
+    background: rgb(34, 185, 202);
+    opacity: 0.9;
+    padding: 0px 20px;
+    display: none;
+}
+.statbutton{
+    background-color:#bd7834;
+    border:none;
+    outline:none;
+    height:30px;
+    width:40px;
+    font-size:1.5em;
+    cursor:pointer;
+    display: none;
+}
+.sideScreen {
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.statText {
+    text-align: left;
+    width: 90px;
 }
